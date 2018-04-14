@@ -1,4 +1,3 @@
-
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition() ;
 recognition.interimResults = true;
@@ -19,9 +18,6 @@ if(e.results[0].isFinal){
     p =  document.createElement('p');
     words.appendChild(p);
 }
-
-// console.log(transcript)
-
 });
 recognition.addEventListener('end', recognition.start);
 recognition.start();
